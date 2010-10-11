@@ -1,0 +1,68 @@
+<config>
+	<mouse enabled="true" />	
+	
+	<!-- 
+	Configures the screensaver.
+	 action = { true, false } 
+	 timeout = { 1 .. N } (Seconds) 
+	 path = string describing the library file.
+--> 		
+	<screensaver active="true" timeout="5" path="resources/screensaver.swf" />
+	
+	<collecoes>
+		<collecao iniciais="BMS" nome="Colecção Biblioteca Municipal de Santarém" />
+		<collecao iniciais="BC"  nome="Colecção Biblioteca Camões" />
+		<collecao iniciais="MA"  nome="Colecção Manuela de Azevedo" />
+		<collecao iniciais="BF"  nome="Colecção Braamcamp Freire" />
+	</collecoes>
+	
+	<categorias>
+		<categoria nome="Armaria" />
+		<categoria nome="Biblioteca" />
+		<categoria nome="Cartografia" />
+		<categoria nome="Cerâmica" />
+		<categoria nome="Escultura" />
+		<categoria nome="Fotografia" />
+		<categoria nome="Serigrafia" />
+		<categoria nome="Gravuras" />
+		<categoria nome="Mobiliário" />
+		<categoria nome="Pintura" />		
+	</categorias>
+	
+	<items>
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="Par de revólveres Lefaucheux / França - Liége" autoria="Desconhecida" data="1860 (+/-)" suporte="Aço e madeira" dimensoes="135 x 259" proveniencia="" coleccao="bf" />
+		
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/armaria/BF.png" categoria="Armaria" texto="imagem1" titulo="autor" coleccao="bf" />
+		
+		
+		<item path="resources/imagens_finais/biblioteca/biblioteca.png" categoria="Biblioteca" texto="imagem1" titulo="autor" coleccao="" />
+		<item path="resources/imagens_finais/cartografia/bartolomeu_lasso.png" categoria="Cartografia" texto="imagem1" titulo="autor" coleccao="" />
+		<item path="resources/imagens_finais/ceramica/BC.png" categoria="Cerâmica" texto="imagem1" titulo="autor" coleccao="bc" />
+		<item path="resources/imagens_finais/ceramica/BF1.png" categoria="Cerâmica" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/ceramica/MA.png" categoria="Cerâmica" texto="imagem1" titulo="autor" coleccao="ma" />
+		<item path="resources/imagens_finais/escultura/BC.png" categoria="Escultura" texto="imagem1" titulo="autor" coleccao="bc" />
+		<item path="resources/imagens_finais/escultura/BF1.png" categoria="Escultura" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/escultura/MA.png" categoria="Escultura" texto="imagem1" titulo="autor" coleccao="ma" />
+		<item path="resources/imagens_finais/fotografia/grandela_aires.png" categoria="Fotografia" texto="imagem1" titulo="autor" coleccao="" />
+		<item path="resources/imagens_finais/gravuras/BC.png" categoria="Gravuras" texto="imagem1" titulo="autor" coleccao="bc" />
+		<item path="resources/imagens_finais/gravuras/BF.png" categoria="Gravuras" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/mobiliario/contador.png" categoria="Mobiliário" texto="imagem1" titulo="autor" coleccao="" />
+		<item path="resources/imagens_finais/pintura/BC.png" categoria="Pintura" texto="imagem1" titulo="autor" coleccao="bc" />
+		<item path="resources/imagens_finais/pintura/BF.png" categoria="Pintura" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/pintura/BMS.png" categoria="Pintura" texto="imagem1" titulo="autor" coleccao="bms" />
+		<item path="resources/imagens_finais/pintura/MA.png" categoria="Pintura" texto="imagem1" titulo="autor" coleccao="ma" />
+		<item path="resources/imagens_finais/serigrafia/BF.png" categoria="Serigrafia" texto="imagem1" titulo="autor" coleccao="bf" />
+		<item path="resources/imagens_finais/serigrafia/mA.png" categoria="Serigrafia" texto="imagem1" titulo="autor" coleccao="ma" />
+	</items>
+</config>

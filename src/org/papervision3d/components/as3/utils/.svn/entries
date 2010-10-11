@@ -1,0 +1,52 @@
+8
+
+dir
+391
+http://papervision3d.googlecode.com/svn/trunk/as3/trunk/src/org/papervision3d/components/as3/utils
+http://papervision3d.googlecode.com/svn
+
+
+
+2007-07-23T18:43:49.139934Z
+117
+neoriley
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+071aa1e1-232a-0410-a790-59abb25ab4c3
+
+CoordinateTools.as
+file
+
+
+
+
+2007-10-11T11:38:34.939092Z
+542482b3a3c07f7182bab0458b920921
+2007-07-13T20:06:18.310105Z
+29
+neoriley
+
+ObjectController.as
+file
+
+
+
+
+2007-10-11T11:38:34.985967Z
+f3536a06dd286ebfd5e37b3f5c8396da
+2007-07-23T18:43:49.139934Z
+117
+neoriley
+

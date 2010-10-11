@@ -1,0 +1,18 @@
+<config>
+	<!--
+			var b:BitmapFileMaterial = new BitmapFileMaterial( "resources/back.jpg" );
+			var f:BitmapFileMaterial = new BitmapFileMaterial( "resources/front.jpg" );
+			var r:BitmapFileMaterial = new BitmapFileMaterial( "resources/right.jpg" );
+			var l:BitmapFileMaterial = new BitmapFileMaterial( "resources/left.jpg" );
+			var t:BitmapFileMaterial = new BitmapFileMaterial( "resources/top.jpg" );
+			var d:BitmapFileMaterial = new BitmapFileMaterial( "resources/down.jpg" );
+	-->
+	
+	<back  path="resources/back.jpg" />
+	<front path="resources/front.jpg" />
+	<right path="resources/right.jpg" />
+	<left  path="resources/left.jpg" />
+	<top   path="resources/top.jpg" />
+	<down  path="resources/down.jpg" />
+		
+</config>

@@ -1,0 +1,40 @@
+8
+
+dir
+391
+http://papervision3d.googlecode.com/svn/trunk/as3/trunk/src/org/papervision3d/components/as3
+http://papervision3d.googlecode.com/svn
+
+
+
+2007-08-10T19:22:41.946177Z
+150
+neoriley
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+071aa1e1-232a-0410-a790-59abb25ab4c3
+
+utils
+dir
+
+flash9
+dir
+
+core
+dir
+
+collections
+dir
+

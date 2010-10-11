@@ -1,0 +1,34 @@
+8
+
+dir
+225
+http://programming.ydreams.com/svn/YDreams_Flash/Trunk/packages-as3/com/ThirdParty/luminicbox
+http://programming.ydreams.com/svn/YDreams_Flash
+
+
+
+2007-06-06T14:54:01.177966Z
+134
+nmorgadinho
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ee5ce42e-d98b-764f-9da6-dee19f31c616
+
+log
+dir
+
+util
+dir
+

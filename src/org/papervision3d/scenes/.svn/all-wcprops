@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/242/trunk/as3/trunk/src/org/papervision3d/scenes
+END
+LayerScene3D.as
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/142/trunk/as3/trunk/src/org/papervision3d/scenes/LayerScene3D.as
+END
+InteractiveScene3D.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/112/trunk/as3/trunk/src/org/papervision3d/scenes/InteractiveScene3D.as
+END
+FlexScene3D.as
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/20/trunk/as3/trunk/src/org/papervision3d/scenes/FlexScene3D.as
+END
+MovieScene3D.as
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/242/trunk/as3/trunk/src/org/papervision3d/scenes/MovieScene3D.as
+END
+Scene3D.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/as3/trunk/src/org/papervision3d/scenes/Scene3D.as
+END

@@ -1,0 +1,52 @@
+8
+
+dir
+337
+http://papervision3d.googlecode.com/svn/trunk/as3/trunk/src/fl/data
+http://papervision3d.googlecode.com/svn
+
+
+
+2007-07-13T20:06:18.310105Z
+29
+neoriley
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+071aa1e1-232a-0410-a790-59abb25ab4c3
+
+SimpleDataProvider.as
+file
+
+
+
+
+2007-10-11T11:38:32.204735Z
+892738b39dcddbced4b57ef747f12dde
+2007-07-13T20:06:18.310105Z
+29
+neoriley
+
+SimpleCollectionItem.as
+file
+
+
+
+
+2007-10-11T11:38:32.235985Z
+2aef28c4307ef24e1c0ffdaa1abb78d2
+2007-07-13T20:06:18.310105Z
+29
+neoriley
+

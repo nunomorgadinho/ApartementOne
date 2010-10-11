@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/YDreams_Flash/!svn/ver/214/Trunk/packages-as3/com/YDreams/display/transitions
+END
+NoTransition.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/YDreams_Flash/!svn/ver/184/Trunk/packages-as3/com/YDreams/display/transitions/NoTransition.as
+END
+FlashTransition.as
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/YDreams_Flash/!svn/ver/184/Trunk/packages-as3/com/YDreams/display/transitions/FlashTransition.as
+END
+FadeTransition.as
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/YDreams_Flash/!svn/ver/184/Trunk/packages-as3/com/YDreams/display/transitions/FadeTransition.as
+END
+Transition.as
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/YDreams_Flash/!svn/ver/214/Trunk/packages-as3/com/YDreams/display/transitions/Transition.as
+END

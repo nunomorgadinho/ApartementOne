@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/YDreams_Flash/!svn/ver/212/Trunk/packages-as3/com/YDreams/sockets
+END
+ProximitySocket.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/YDreams_Flash/!svn/ver/202/Trunk/packages-as3/com/YDreams/sockets/ProximitySocket.as
+END
+HitElement.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/YDreams_Flash/!svn/ver/158/Trunk/packages-as3/com/YDreams/sockets/HitElement.as
+END
+SegmentPositionSocket.as
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/YDreams_Flash/!svn/ver/164/Trunk/packages-as3/com/YDreams/sockets/SegmentPositionSocket.as
+END
+ISocket.as
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/YDreams_Flash/!svn/ver/212/Trunk/packages-as3/com/YDreams/sockets/ISocket.as
+END
+ZoneActivitySocket.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/YDreams_Flash/!svn/ver/191/Trunk/packages-as3/com/YDreams/sockets/ZoneActivitySocket.as
+END
+FlashComSocket.as
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/YDreams_Flash/!svn/ver/158/Trunk/packages-as3/com/YDreams/sockets/FlashComSocket.as
+END
+ArToolkitPositionSocket.as
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/YDreams_Flash/!svn/ver/191/Trunk/packages-as3/com/YDreams/sockets/ArToolkitPositionSocket.as
+END
+SensorBarSocket.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/YDreams_Flash/!svn/ver/158/Trunk/packages-as3/com/YDreams/sockets/SensorBarSocket.as
+END
+AbstractSocket.as
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/YDreams_Flash/!svn/ver/212/Trunk/packages-as3/com/YDreams/sockets/AbstractSocket.as
+END

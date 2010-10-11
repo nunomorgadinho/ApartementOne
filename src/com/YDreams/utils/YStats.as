@@ -1,0 +1,321 @@
+﻿/* $Id: YStats.as 179 2007-07-18 13:52:03Z ivaladares $ */
+package com.YDreams.utils
+{
+	import flash.net.XMLSocket;
+	import flash.events.Event;
+	import flash.events.IOErrorEvent;
+	import flash.display.Sprite;
+	import com.ThirdParty.luminicbox.log.Logger;
+	import com.ThirdParty.luminicbox.log.ConsolePublisher;
+	import flash.events.KeyboardEvent;
+	import flash.events.TimerEvent;
+	import flash.utils.Timer;
+	
+	/**
+	 * Collect statistical information regarding the usage of an application.
+	 * 
+	 * Original work by Hugo Mendes. Ported to AS3 by Nuno Morgadinho.
+	 */	 
+	public class YStats extends Sprite
+	{ 
+		/**
+		 * app_id - Application identifier for statistical purposes
+		 */
+		private var app_id:String;
+		private var socket_ip:String;
+		private var socket_port:int;
+		private var msg_cache_limit:int;
+		private var _lastKeyPressed:int;
+		public static const CONNECTED:String = "STATS_CONNECTED";
+		
+		/**
+		*  Generic log messages
+		*/		
+		private var EVENTMSG_OPENMSG:String = "<eventMessage appId=\"[app_id]\" eventId=\"[eventId]\" timestamp=\"[timestamp]\">\r\n";
+		private var EVENTMSG_CLOSEMSG:String = "</eventMessage>\r\n";
+		private var ARGS_OPENMSG:String = "  <args>\r\n";		
+		private var ARGS_CLOSEMSG:String = "  </args>\r\n";		
+		private var ARG_MSG:String = "    <arg id=\"[argId]\" value=\"[argValue]\"/>\r\n";
+		
+		/**
+		 *  Socket that will connect to the log stats router
+		 */
+		private var xml_socket:XMLSocket;		
+		private var id_interval_reconnect:int;
+		private var msgs_cached:Array;
+		private var _log:Logger;
+		private var _retryTimer:Timer;
+		private var _retryAttempts:int;
+		private var _retryInterval:int;
+		private var _attempts:int;
+			     
+		/**
+		 * Class constructor for creating statistical logs, that are sent to a router through socket.
+		 * 
+		 * @param app_id - Application identifier.
+		 * @param socket_ip
+		 * @param socket_port
+		 * @param msg_cache_limit
+		 * @param retryAttempts - number of retry attempts (0 means forever).
+		 * @param retryInterval - time between each connect attempt.
+		 * @return 
+		 * 
+		 */		 
+		public function YStats(app_id:String, socket_ip:String, socket_port:int, msg_cache_limit:int, retryAttempts:int = 0, retryInterval:int = 5000)
+		{
+			_log = new Logger();
+			_log.addPublisher( new ConsolePublisher() );
+			
+			this.app_id = app_id;
+			this.socket_ip = socket_ip;
+			this.socket_port = socket_port;
+			this.msg_cache_limit = msg_cache_limit;
+			this._retryAttempts = retryAttempts;
+			this._retryInterval = retryInterval;
+			this._attempts = 0;
+			this._lastKeyPressed = 0;
+			this.msgs_cached = new Array();
+						
+			xml_socket = new XMLSocket();
+			
+			/* event dispatchers */
+			xml_socket.addEventListener(Event.CONNECT, socketConnect);
+			xml_socket.addEventListener(Event.CLOSE, socketClose);
+			xml_socket.addEventListener(IOErrorEvent.IO_ERROR, socketError);
+			xml_socket.addEventListener(IOErrorEvent.NETWORK_ERROR, socketError);
+			xml_socket.addEventListener(IOErrorEvent.VERIFY_ERROR, socketError);
+			
+			/**
+			 * register a timer event for connection retry attempts
+			 */				
+            _retryTimer = new Timer(_retryInterval, _retryAttempts);                        
+            _retryTimer.addEventListener(TimerEvent.TIMER, onRetry);            
+            _retryTimer.start();
+            
+            tryConnect();
+		}
+		 		 
+		/**
+		 * Event for each timer interval attempt
+		 * 
+		 * @param evt - Notifies if timer is complete
+		 * 
+		 */		
+		public function onRetry(evt:TimerEvent):void
+		{
+            tryConnect();
+		}
+		
+		/**
+		 * Connect to the socket.
+		 */		
+		public function tryConnect():void
+		{
+			_log.debug("Trying to connect to stats router at " + socket_ip + ":" + socket_port);
+		
+			if (xml_socket.connected)		
+			{
+				_log.debug("Already connected to stats router, sending cached stats.");
+				sendCacheStats();
+				_retryTimer.reset();
+				_attempts = 0;
+			}
+			else
+			{
+				try 
+				{
+					if (_attempts<_retryAttempts || _retryAttempts<=0)
+					{
+						_attempts++;
+						xml_socket.connect(socket_ip, socket_port);
+					}
+					else
+					{
+						_log.debug("***DIE. No more attempts!***");
+					}
+				} catch (e:Error) {
+					_log.debug("error connecting to stats server");
+				}
+			}				 				
+		}
+		
+		/**
+		 * Event notifying the socket connection event.
+		 * 
+		 * @param success - If the connection was successful estabilished.
+		 * 
+		 */		
+		private function socketConnect(evt:Event):void
+		{
+			_log.debug("Connected to stats server? " + xml_socket.connected);	
+			_retryTimer.reset();
+			
+			dispatchEvent(new Event(CONNECTED));
+			sendCacheStats();
+		}
+		
+		/**
+		 * Event notifying the socket connection was closed.
+		 */		
+		private function socketClose(evt:Event):void
+		{
+			_log.debug("Stats Server Socket closed.");
+			if (!_retryTimer.running)
+			{
+				_retryTimer.reset();
+				_retryTimer.start();
+			}
+		}
+		
+		private function socketError(evt:IOErrorEvent):void
+		{
+			_log.debug("Socket Error!");
+			if (!_retryTimer.running)
+			{
+				_retryTimer.reset();
+				_retryTimer.start();
+			}
+			//reconnect();
+		}
+				
+		/**
+		 * Creates a standard log message and replaces their content with the given values
+		 * 
+		 * @param eventId - Event identifier (String)
+		 * @param argValues - Array with set of arguments (Array)
+		 */		
+		public function logStats(eventId:String, argValues:Array):String
+		{
+			var logMsg:String = EVENTMSG_OPENMSG;
+			var myDate:Date = new Date();
+			
+			logMsg = logMsg.replace(/\[app_id\]/, app_id.toString());		
+			logMsg = logMsg.replace(/\[eventId\]/, eventId);
+			logMsg = logMsg.replace(/\[timestamp\]/, getStatsDate(myDate));									
+									
+			logMsg += ARGS_OPENMSG;
+			for(var i:int=0; i < argValues.length; i++)
+			{
+				var argTmpMsg:String = ARG_MSG;
+				argTmpMsg = argTmpMsg.replace(/\[argId\]/, argValues[i][0].toString());
+				argTmpMsg = argTmpMsg.replace(/\[argValue\]/, argValues[i][1].toString());
+			
+				logMsg = logMsg.concat(argTmpMsg);
+			}
+			logMsg = logMsg.concat(ARGS_CLOSEMSG);			
+			logMsg = logMsg.concat(EVENTMSG_CLOSEMSG);
+			
+			trace("logMsg = "+logMsg);
+			sendStats(logMsg);
+			
+			return logMsg;
+		}
+		
+		private function getStatsDate(actualDate:Date):String
+		{
+			return actualDate.getUTCFullYear() + "-" + dateLength(String(actualDate.getUTCMonth()+1)) + "-" + dateLength(String(actualDate.getUTCDate())) + " " + dateLength(String(actualDate.getUTCHours())) + ":" + dateLength(String(actualDate.getUTCMinutes())) + ":" + dateLength(String(actualDate.getUTCSeconds() + "Z"));
+		}
+		
+		/**
+		 * Checks if the input needs has one of length and if so, 
+		 * inserts a zero before.
+		 * 
+		 * @param input - String to be analyzed
+		 * @return - the modified string.
+		 * 
+		 */		
+		private static function dateLength(input:String):String
+		{
+			if(input.length == 1)
+				return "0" + input;
+			else
+				return input;
+		}
+		
+		/**
+		 * Sends the message to the socket.
+		 * 
+		 * @param logMsg - Log message to be send
+		 * 
+		 */		
+		public function sendStats(logMsg:String):void
+		{
+			if(xml_socket.connected)
+			{
+				_log.debug("Logging stats message: " + logMsg);
+				try 
+				{
+					xml_socket.send(logMsg);
+				}
+				catch(e:Error)
+				{
+					_log.debug("Send Error!");
+					cacheStats(logMsg);
+				}
+				
+			}
+			else
+			{
+				cacheStats(logMsg);
+				
+				// Connection is down, check if is trying to reconnect
+				if (!_retryTimer.running)
+				{
+					_retryTimer.reset();
+					_retryTimer.start();
+				}
+			}
+		}
+		
+		/**
+		 * Push the msg into an array for caching purposes.
+		 * 
+		 * @param logMsg - Log message to be send
+		 */		
+		private function cacheStats(logMsg:String):void
+		{
+			_log.debug("Caching stats message: (" + msgs_cached.length + "/" + msg_cache_limit + ")" + logMsg);
+			msgs_cached.push(logMsg);
+			
+			if(msg_cache_limit != -1)
+			{
+				if(msgs_cached.length > msg_cache_limit)
+					msgs_cached.shift();
+			}
+		}
+		
+		/**
+		 * Flush the local cache array.
+		 * 
+		 */		
+		private function sendCacheStats():void
+		{
+			for(var i:int=0; i<msgs_cached.length; i++)
+			{
+				_log.debug("From cach:"+msgs_cached[i]);
+				sendStats(msgs_cached[i]);
+			}
+			msgs_cached = new Array();
+		}
+		
+		/**
+		 * Close down socket connection.
+		 * 
+		 */		
+		public function disconnect():void
+		{
+			if (xml_socket.connected)
+				xml_socket.close();
+		}
+		
+		public function reconnect():void
+		{
+			_attempts = 0;
+            _retryTimer.start();
+            
+            tryConnect();
+		}
+						
+	}
+}
+

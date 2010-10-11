@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/228/trunk/as3/trunk/src/org/papervision3d/objects/particles
+END
+StarParticle.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/228/trunk/as3/trunk/src/org/papervision3d/objects/particles/StarParticle.as
+END
+AbstractParticle.as
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/228/trunk/as3/trunk/src/org/papervision3d/objects/particles/AbstractParticle.as
+END
+IParticle.as
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/228/trunk/as3/trunk/src/org/papervision3d/objects/particles/IParticle.as
+END

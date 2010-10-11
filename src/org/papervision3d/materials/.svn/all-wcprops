@@ -1,0 +1,191 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/247/trunk/as3/trunk/src/org/papervision3d/materials
+END
+CompositeMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/CompositeMaterial.as
+END
+InteractiveBitmapColorMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/199/trunk/as3/trunk/src/org/papervision3d/materials/InteractiveBitmapColorMaterial.as
+END
+InteractiveBitmapMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/InteractiveBitmapMaterial.as
+END
+InteractiveBitmapFileMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/InteractiveBitmapFileMaterial.as
+END
+BitmapColorMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/BitmapColorMaterial.as
+END
+BitmapMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/242/trunk/as3/trunk/src/org/papervision3d/materials/BitmapMaterial.as
+END
+BitmapFileMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/244/trunk/as3/trunk/src/org/papervision3d/materials/BitmapFileMaterial.as
+END
+InteractiveColorMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/InteractiveColorMaterial.as
+END
+ColorMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/ColorMaterial.as
+END
+PreciseMovieAssetMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/240/trunk/as3/trunk/src/org/papervision3d/materials/PreciseMovieAssetMaterial.as
+END
+MaterialsList.as
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/150/trunk/as3/trunk/src/org/papervision3d/materials/MaterialsList.as
+END
+IPreciseMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/240/trunk/as3/trunk/src/org/papervision3d/materials/IPreciseMaterial.as
+END
+InteractiveBitmapAssetMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/InteractiveBitmapAssetMaterial.as
+END
+BitmapAssetMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/221/trunk/as3/trunk/src/org/papervision3d/materials/BitmapAssetMaterial.as
+END
+InteractiveBitmapWireframeMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/InteractiveBitmapWireframeMaterial.as
+END
+InteractiveMovieAssetMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/InteractiveMovieAssetMaterial.as
+END
+InteractiveMovieMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/InteractiveMovieMaterial.as
+END
+BitmapWireframeMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/BitmapWireframeMaterial.as
+END
+MovieMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/232/trunk/as3/trunk/src/org/papervision3d/materials/MovieMaterial.as
+END
+MovieAssetMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/MovieAssetMaterial.as
+END
+InteractiveWireframeMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/InteractiveWireframeMaterial.as
+END
+InteractiveVideoStreamMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/InteractiveVideoStreamMaterial.as
+END
+WireframeMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/WireframeMaterial.as
+END
+VideoStreamMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/232/trunk/as3/trunk/src/org/papervision3d/materials/VideoStreamMaterial.as
+END
+InteractiveShadedColorMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/198/trunk/as3/trunk/src/org/papervision3d/materials/InteractiveShadedColorMaterial.as
+END
+InteractivePreciseBitmapMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/219/trunk/as3/trunk/src/org/papervision3d/materials/InteractivePreciseBitmapMaterial.as
+END
+ShadedColorMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/235/trunk/as3/trunk/src/org/papervision3d/materials/ShadedColorMaterial.as
+END
+PreciseBitmapMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/247/trunk/as3/trunk/src/org/papervision3d/materials/PreciseBitmapMaterial.as
+END
+PreciseBitmapFileMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/240/trunk/as3/trunk/src/org/papervision3d/materials/PreciseBitmapFileMaterial.as
+END
+PreciseBitmapAssetMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/240/trunk/as3/trunk/src/org/papervision3d/materials/PreciseBitmapAssetMaterial.as
+END
+PreciseMovieMaterial.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/240/trunk/as3/trunk/src/org/papervision3d/materials/PreciseMovieMaterial.as
+END

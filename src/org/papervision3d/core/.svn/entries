@@ -1,0 +1,79 @@
+8
+
+dir
+391
+http://papervision3d.googlecode.com/svn/trunk/as3/trunk/src/org/papervision3d/core
+http://papervision3d.googlecode.com/svn
+
+
+
+2007-09-04T14:34:10.629752Z
+244
+r.hauwert
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+071aa1e1-232a-0410-a790-59abb25ab4c3
+
+Number3D.as
+file
+
+
+
+
+2007-10-11T11:38:36.689081Z
+0b5cca85f12ef5ea2a4143ac8595cf09
+2007-07-20T01:54:01.851012Z
+93
+neoriley
+
+proto
+dir
+
+NumberUV.as
+file
+
+
+
+
+2007-10-11T11:38:36.704706Z
+1dfedf52f252e5427c0f6b09e6b27a5b
+2007-02-23T13:12:37.117283Z
+2
+neoriley
+
+geom
+dir
+
+stat
+dir
+
+culling
+dir
+
+draw
+dir
+
+Matrix3D.as
+file
+
+
+
+
+2007-10-11T11:38:36.735956Z
+be5a89e798c6dded8ddb6666fc0f8c2d
+2007-07-04T02:42:55.787743Z
+19
+neoriley
+

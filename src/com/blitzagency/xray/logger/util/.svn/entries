@@ -1,0 +1,52 @@
+8
+
+dir
+337
+http://papervision3d.googlecode.com/svn/trunk/as3/trunk/src/com/blitzagency/xray/logger/util
+http://papervision3d.googlecode.com/svn
+
+
+
+2007-07-18T13:58:04.953448Z
+37
+neoriley
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+071aa1e1-232a-0410-a790-59abb25ab4c3
+
+PropertyTools.as
+file
+
+
+
+
+2007-10-11T11:38:38.282821Z
+e0d47f9d116d631c5082a7a95dc27518
+2007-02-23T13:12:37.117283Z
+2
+neoriley
+
+ObjectTools.as
+file
+
+
+
+
+2007-10-11T11:38:38.298446Z
+9d3899018411718bd225fedc2ed53d1a
+2007-07-18T13:58:04.953448Z
+37
+neoriley
+
